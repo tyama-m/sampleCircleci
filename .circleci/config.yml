@@ -15,6 +15,7 @@ jobs:
     steps:
        # TimeZoneを設定する
       - run: sudo systemsetup -settimezone Asia/Tokyo
+      - checkout
 
 #---------------------------------------------------
 # 証明書の登録
