@@ -32,7 +32,7 @@ jobs:
           name: "Build"
           command: |
             cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
-            ./build.sh
+            sudo bash ./build.sh
 
 #========================================================
 #　ワークフローの定義
