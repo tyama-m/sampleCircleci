@@ -31,7 +31,7 @@ jobs:
             sudo security create-keychain -p Kaihatsu1924 ~/Library/Keychains/morisawa.keychain-db
             sudo security list-keychains -d user -s ~/Library/Keychains/morisawa.keychain-db
             sudo security import ~/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager/certs/development/Developer\ ID\ Application.p12 -k ~/Library/Keychains/morisawa.keychain-db -P Kaihatsu1924 -T /usr/bin/codesign -T /usr/bin/security -T /usr/bin/productbuild
-            sudo security default-keychain -d user -s ~/Library/Keychains/morisawa.keychain-db
+#            sudo security default-keychain -d user -s ~/Library/Keychains/morisawa.keychain-db
 
 #---------------------------------------------------
 # ビルド
