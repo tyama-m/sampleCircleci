@@ -7,8 +7,9 @@ version: 2.1
 jobs:
   build-mac-dev:
     macos:
-      xcode: 13.4.0
-      resource_class: macos.x86.medium.gen2
+      xcode: 12.3.0
+#      xcode: 13.4.0
+#      resource_class: macos.x86.medium.gen2
 
     working_directory: $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
 
@@ -24,7 +25,7 @@ jobs:
           name: "security import(login)"
           command: |
             sudo security import ~/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager/certs/development/Developer\ ID\ Application.p12 -k ~/Library/Keychains/login.keychain-db -P Kaihatsu1924 -T /usr/bin/codesign -T /usr/bin/security -T /usr/bin/productbuild
-            sudo security list-keychains
+#            sudo security list-keychains
 
 #       - run:
 #           name: "security import(morisawa)"
