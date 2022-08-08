@@ -7,7 +7,7 @@ version: 2.1
 jobs:
   build-mac-dev:
     macos:
-      xcode: 12
+      xcode: 12.1.0
 #      xcode: 13.4.0
 #      resource_class: macos.x86.medium.gen2
 
