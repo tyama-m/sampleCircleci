@@ -51,11 +51,11 @@ jobs:
 #---------------------------------------------------
 # ビルド
 #---------------------------------------------------
-      # - run:
-      #     name: "Build"
-      #     command: |
-      #       cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
-      #       sudo bash ./build.sh
+      - run:
+          name: "Build"
+          command: |
+            cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
+            sudo bash ./build.sh
 
 workflows:
   version: 2.1
