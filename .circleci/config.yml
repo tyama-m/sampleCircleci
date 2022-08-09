@@ -19,13 +19,13 @@ jobs:
 #---------------------------------------------------
 # 証明書の登録
 #---------------------------------------------------
-      #- run:
-          # name: "security import(login)"
-          # command: |
-              sudo security import ~/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager/certs/development/Developer\ ID\ Application.p12 -k ~/Library/Keychains/login.keychain-db -P Kaihatsu1924 -T /usr/bin/codesign -T /usr/bin/security -T /usr/bin/productbuild
-              sudo security set-key-partition-list -S apple-tool:,apple:,codesign: -s login.keychain-db
-              sudo security find-identity -v -p codesigning
-              sudo security set-keychain-settings -lut 600
+      - run:
+          name: "security import(login)"
+          command: |
+            sudo security import ~/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager/certs/development/Developer\ ID\ Application.p12 -k ~/Library/Keychains/login.keychain-db -P Kaihatsu1924 -T /usr/bin/codesign -T /usr/bin/security -T /usr/bin/productbuild
+            sudo security set-key-partition-list -S apple-tool:,apple:,codesign: -s login.keychain-db
+            sudo security find-identity -v -p codesigning
+            sudo security set-keychain-settings -lut 600
 
       # - run:
       #     name: "security import(circleci)"
