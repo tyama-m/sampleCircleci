@@ -28,9 +28,10 @@ jobs:
       - run:
           name: "security import(circleci)"
           command: |
-            sudo security -v create-keychain -p Kaihatsu1924 circleci.keychain
-            sudo security import ~/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager/certs/development/Developer\ ID\ Application.p12 -k ~/Library/Keychains/circleci.keychain -P Kaihatsu1924 -T /usr/bin/codesign -T /usr/bin/security -T /usr/bin/productbuild
+            sudo security -v create-keychain -p Kaihatsu1924 circleci.keychain-db
+            sudo security import ~/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager/certs/development/Developer\ ID\ Application.p12 -k ~/Library/Keychains/circleci.keychain-db -P Kaihatsu1924 -T /usr/bin/codesign -T /usr/bin/security -T /usr/bin/productbuild
             sudo security set-keychain-settings -lut 600
+            sudo security find-identity -v -p codesigning
 
 #---------------------------------------------------
 # ビルド
