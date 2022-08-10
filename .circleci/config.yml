@@ -26,10 +26,10 @@ jobs:
           name: "Build"
           command: |
             cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
-            sudo bash ./build.sh
+#            sudo bash ./build.sh
 
 workflows:
   version: 2.1
-  mdm-cicd-workflow:
+  fastlane-test_workflow:
     jobs:
       - build-mac-dev
