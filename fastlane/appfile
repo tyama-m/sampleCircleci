@@ -1,6 +1,8 @@
-app_identifier jp.co.jp.morisawa.sampleCircleci
+app_identifier jp.co.morisawa.MorisawaDesktopManagerObfuscation
 apple_id "hdogan@morisawa.co.jp"
 team_id "662PVPVA3N"
+
+#app_identifier jp.co.jp.morisawa.sampleCircleci
 
 # For more information about the Appfile, see:
 #     https://docs.fastlane.tools/advanced/#appfile
