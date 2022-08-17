@@ -1,0 +1,6 @@
+app_identifier jp.co.jp.morisawa.sampleCircleci
+apple_id "hdogan@morisawa.co.jp"
+team_id "662PVPVA3N"
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

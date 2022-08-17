@@ -1,0 +1,12 @@
+opt_out_usage
+default_platform :mac
+
+platform :mac do
+  before_all do
+    setup_circle_ci
+  end
+
+  lane :certmatch do
+    match(type: "development", readonly: true)
+  end
+end

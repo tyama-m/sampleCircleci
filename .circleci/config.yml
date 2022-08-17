@@ -13,11 +13,27 @@ jobs:
       - checkout
 
 #---------------------------------------------------
+# fastlane update.
+#---------------------------------------------------
+      - run:
+          name: "fastlane update"
+          command: |
+            export GOPATH=$HOME/go
+            cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
+            bundle update --bundler
+            bundle install
+            bundle update fastlane
+
+#---------------------------------------------------
 # 証明書の登録
 #---------------------------------------------------
-      # - run:
-      #     name: "fastlane match"
-      #     command: |
+      - run:
+          name: "fastlane match"
+          command: |
+            export GOPATH=$HOME/go
+            cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
+            fastlane run opt_out_usage
+            fastlane match development --readonly
 
 #---------------------------------------------------
 # ビルド
@@ -26,7 +42,7 @@ jobs:
           name: "Build"
           command: |
             cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
-#            sudo bash ./build.sh
+            sudo bash ./build.sh
 
 workflows:
   version: 2.1
