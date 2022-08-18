@@ -30,7 +30,6 @@ jobs:
       - run:
           name: "fastlane match"
           command: |
-#            export GOPATH=$HOME/go
             cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
             fastlane run opt_out_usage
             fastlane match development --readonly
