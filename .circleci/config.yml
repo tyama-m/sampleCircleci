@@ -21,7 +21,7 @@ workflows:
   version: 2.1
   mdm-cicd-workflow:
     jobs:
-      - build-mac-dev
+      - build-mac-dev:
           filters:
             branches:
               only: develop
