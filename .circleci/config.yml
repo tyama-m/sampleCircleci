@@ -15,7 +15,7 @@ jobs:
       - run: sudo systemsetup -settimezone Asia/Tokyo
       - checkout
 
-      - run: echo "pullrequest job execute test"
+      - run: echo "Only build pull requests ON"
 
 workflows:
   version: 2.1
