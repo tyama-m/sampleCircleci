@@ -37,7 +37,7 @@ jobs:
           name: "fastlane import"
           command: |
             cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
-            fastlane match import --skip_certificate_matching true
+            sudo fastlane match import --skip_certificate_matching true
 
 #---------------------------------------------------
 # ビルド
