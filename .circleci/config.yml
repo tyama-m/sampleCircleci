@@ -38,8 +38,7 @@ jobs:
           command: |
             cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
             fastlane run opt_out_usage
-            fastlane import
-#            fastlane import --skip_certificate_matching true
+            fastlane match import --skip_certificate_matching true
 
 #---------------------------------------------------
 # ビルド
