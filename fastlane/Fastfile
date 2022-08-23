@@ -6,7 +6,7 @@ platform :mac do
     setup_circle_ci
   end
 
-  lane :"mac import" do
+  lane :"mac-import" do
     match(type: "development", readonly: true)
   end
 end
