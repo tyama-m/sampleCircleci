@@ -18,8 +18,6 @@ jobs:
       - run:
           name: "fastlane update"
           command: |
-            export GOPATH=$HOME/go
-            cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
             bundle update --bundler
             bundle install
             bundle update fastlane
