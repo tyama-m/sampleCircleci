@@ -30,28 +30,14 @@ jobs:
       # - run:
       #     name: "fastlane match"
       #     command: |
-      #       cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
       #       fastlane run opt_out_usage
       #       fastlane match development --readonly
 
-      # - run:
-      #     name: "fastlane import"
-      #     command: |
-      #       cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
-      #       fastlane run opt_out_usage
-      #       fastlane match import --skip_certificate_matching true
-
-      - run:
-          name: "fastlane import2"
-          command: |
-            cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
-            fastlane run opt_out_usage
-            fastlane match import \
-            —hdogan@morisawa.co.jp \
-            --git_url git@github.com:tyama-m/mdm-certificates.git \
-            --app_identifier jp.co.morisawa.MorisawaDesktopManagerObfuscation \
-            --team_name "Morisawa Desktop Manager" \
-            --type development
+      # fastlane import.
+      - run: |
+          bundle exec fastlane run opt_out_usage
+      - run: |
+          bundle exec fastlane match import --skip_certificate_matching true
 
 #---------------------------------------------------
 # ビルド
