@@ -33,12 +33,17 @@ jobs:
       #       fastlane match development --readonly
 
       # fastlane import.
-      - run: |
-          cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
-          bundle exec fastlane run opt_out_usage
-      - run: |
-          cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
-          bundle exec fastlane match import --skip_certificate_matching true
+      - run:
+          name: "fastlane run opt_out_usage"
+          command: |
+            cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
+            bundle exec fastlane run opt_out_usage
+
+      - run:
+          name: "fastlane match import"
+          command: |
+            cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
+            bundle exec fastlane match import --skip_certificate_matching true
 
 #---------------------------------------------------
 # ビルド
