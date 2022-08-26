@@ -30,7 +30,7 @@ jobs:
           name: "fastlane match"
           command: |
             fastlane run opt_out_usage
-            fastlane match development --readonly --skip_certificate_matching true
+            fastlane match development --readonly
 
       # # fastlane import.
       # - run:
