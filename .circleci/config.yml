@@ -26,24 +26,24 @@ jobs:
 #---------------------------------------------------
 # 証明書の登録
 #---------------------------------------------------
+      - run:
+          name: "fastlane match"
+          command: |
+            fastlane run opt_out_usage
+            fastlane match development --readonly --skip_certificate_matching true
+
+      # # fastlane import.
       # - run:
-      #     name: "fastlane match"
+      #     name: "fastlane run opt_out_usage"
       #     command: |
-      #       fastlane run opt_out_usage
-      #       fastlane match development --readonly
+      #       cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
+      #       bundle exec fastlane run opt_out_usage
 
-      # fastlane import.
-      - run:
-          name: "fastlane run opt_out_usage"
-          command: |
-            cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
-            bundle exec fastlane run opt_out_usage
-
-      - run:
-          name: "fastlane match import"
-          command: |
-            cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
-            bundle exec fastlane match import --skip_certificate_matching true
+      # - run:
+      #     name: "fastlane match import"
+      #     command: |
+      #       cd $HOME/go/src/github.com/morisawa-tokyo-dev/morisawa-desktop-manager
+      #       bundle exec fastlane match import --skip_certificate_matching true
 
 #---------------------------------------------------
 # ビルド

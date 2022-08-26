@@ -1,12 +1,11 @@
 #git_url("git@github.com:tyama-m/morisawa-desktop-manager.git")
-#git_url("git@github.com:tyama-m/mdm-certificates.git")
-git_url("git@github.com:tyama-m/SampleCertificates.git")
+git_url("git@github.com:tyama-m/mdm-certificates.git")
 
 storage_mode("git")
 
 type("development") # The default type, can be: appstore, adhoc, enterprise or development
 
-app_identifier("jp.co.morisawa.MorisawaDesktopManagerObfuscation")
+#app_identifier("jp.co.morisawa.MorisawaDesktopManagerObfuscation")
 username("tyama@morisawa.co.jp")
 #username("hdogan@morisawa.co.jp")
 #username("tokyo-dev@morisawa.co.jp")
